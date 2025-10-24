@@ -1,4 +1,4 @@
-# ⚡ React Hookstack
+# ⚡ React Performify
 
 [![license](https://img.shields.io/github/license/Shakir-Afridi/react-performify)](LICENSE)
 [![issues](https://img.shields.io/github/issues/Shakir-Afridi/react-performify)](https://github.com/Shakir-Afridi/react-performify/issues)
@@ -23,7 +23,7 @@ A lightweight React performance toolkit that gives developers easy-to-use hooks 
 ## 📘 Storybook
 
 Explore all hooks interactively on Storybook:  
-👉 [Live Demo](https://shakir-afridi.github.io/react-performify/)
+👉 [Live Demo](https://shakir-afridi.github.io/react-performify)
 
 ## 📦 Installation
 
