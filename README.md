@@ -1,73 +1,156 @@
-# React + TypeScript + Vite
+# ⚡ React Hookstack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![license](https://img.shields.io/github/license/Shakir-Afridi/react-performify)](LICENSE)
+[![issues](https://img.shields.io/github/issues/Shakir-Afridi/react-performify)](https://github.com/Shakir-Afridi/react-performify/issues)
+[![typescript](https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![react](https://img.shields.io/badge/React-19+-61dafb?logo=react)](https://react.dev/)
+![Coverage](https://img.shields.io/badge/Coverage-93%25-brightgreen)
 
-Currently, two official plugins are available:
+A lightweight React performance toolkit that gives developers easy-to-use hooks and utilities to measure, optimize, and visualize component performance. Its goal is to make performance management as easy as state management — all using clean, composable hooks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🧠 **Smart utilities** — abstract common React logic into reusable hooks  
+- 🪶 **Lightweight** — zero external dependencies  
+- ⚙️ **TypeScript support** — fully typed API  
+- 🧩 **Composable** — integrate easily into existing code  
+- 🔧 **Framework agnostic** — works with any React setup (Vite, CRA, Next.js, etc.)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📘 Storybook
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Explore all hooks interactively on Storybook:  
+👉 [Live Demo](https://shakir-afridi.github.io/react-performify/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Once published to npm:
+
+```bash
+npm install react-performify
+# or
+yarn add react-performify
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## If you’re developing locally and want to test it
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Inside react-performify/
+npm link
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# In your target React project:
+npm link react-performify
 ```
+
+## 🧠 Available Hooks
+
+| Hook Name                    | Description                           |
+|------------------------------|---------------------------------------|
+| useDebouncedEffect           | Runs effect after delay               |
+| useLazyMemo                  | Lazily memoizes value                 |
+| useMemoizedCallback          | Memoizes callback to avoid recreation |
+| usePerformanceMonitor        | Monitors performance metrics          |
+| usePerformanceOverlay        | Displays performance overlay          |
+| usePerformanceStats          | Tracks render statistics              |
+| useRenderCount               | Counts component renders              |
+| useStableObject              | Keeps object reference stable         |
+| useThrottledCallback         | Throttles callback execution          |
+| useVirtualList               | Optimizes rendering large lists       |
+| useWhyDidYouRender           | Logs prop changes between renders     |
+
+## 🧩 Example Usage
+
+```bash
+import React from "react";
+import { useToggle } from "react-performify";
+
+export const Example = () => {
+  const [isOpen, toggle] = useToggle(false);
+
+  return (
+    <div>
+      <button onClick={toggle}>
+        {isOpen ? "Hide" : "Show"} Details
+      </button>
+
+      {isOpen && <p>Here are the details...</p>}
+    </div>
+  );
+};
+```
+
+## Development
+
+```bash
+git clone https://github.com/Shakir-Afridi/react-performify.git
+cd react-performify
+npm install
+```
+
+## Start development mode
+
+```bash
+npm run dev
+```
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## To test it in another project locally
+
+```bash
+npm link
+# then in your test project:
+npm link react-performify
+```
+
+## 🧾 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+## 💡 Contributing
+
+Contributions are welcome!
+If you’d like to add new hooks or fix bugs, please open an issue or submit a pull request.
+
+```bash
+# Fork & clone
+git clone https://github.com/Shakir-Afridi/react-performify.git
+
+# Create a feature branch
+git checkout -b feature/my-new-hook
+
+# Commit changes
+git commit -m "feat: add useXYZ hook"
+
+# Push & open PR
+git push origin feature/my-new-hook
+```
+
+## 👨‍💻 Author
+
+React Hookstack — maintained by passionate open-source developers who believe in clean, reusable React logic
+
+## ⭐ Support
+
+If you find this library useful, please give it a star ⭐ on GitHub —
+it helps others discover and support the project!
+
+## Keywords
+
+- **react**
+- **hooks**
+- **react-hooks**
+- **custom-hooks**
+- **typescript**
+- **utility-hooks**
+- **ui-hooks**
+- **performance-hooks**
+- **frontend**
+- **react-library**

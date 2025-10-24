@@ -3,16 +3,27 @@
     "private": true,
     "version": "0.0.1",
     "type": "module",
-    "author": "Shakir Ullah",
+    "author": {
+        "name": "Shakir Ullah",
+        "email": "shakir201650@gmail.com"
+    },
     "description": "A lightweight React performance toolkit that gives developers easy-to-use hooks and utilities to measure, optimize, and visualize component performance.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsup src/index.ts --format esm,cjs --dts --clean",
         "lint": "eslint src --ext .ts,.tsx",
-        "storybook": "storybook dev -p 6006"
+        "storybook": "storybook dev -p 6006",
+        "clean": "rm -rf dist"
     },
     "dependencies": {
         "framer-motion": "^12.23.24",
@@ -40,5 +51,22 @@
         "type": "git",
         "url": "git+https://github.com/Shakir-Afridi/react-performify.git"
     },
-    "license": "MIT"
+    "bugs": {
+        "url": "https://github.com/Shakir-Afridi/react-performify/issues"
+    },
+    "homepage": "https://github.com/Shakir-Afridi/react-performify#readme",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "hooks",
+        "typescript",
+        "custom-hooks",
+        "performance",
+        "state-management",
+        "optimization",
+        "useDebouncedEffect",
+        "usePerformanceStats",
+        "useVirtualList",
+        "useWhyDidYouRender"
+    ]
 }
