@@ -4,7 +4,6 @@
 [![issues](https://img.shields.io/github/issues/Shakir-Afridi/react-performify)](https://github.com/Shakir-Afridi/react-performify/issues)
 [![typescript](https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 [![react](https://img.shields.io/badge/React-19+-61dafb?logo=react)](https://react.dev/)
-![Coverage](https://img.shields.io/badge/Coverage-93%25-brightgreen)
 
 A lightweight React performance toolkit that gives developers easy-to-use hooks and utilities to measure, optimize, and visualize component performance. Its goal is to make performance management as easy as state management — all using clean, composable hooks.
 
@@ -13,7 +12,7 @@ A lightweight React performance toolkit that gives developers easy-to-use hooks 
 ## 🚀 Features
 
 - 🧠 **Smart utilities** — abstract common React logic into reusable hooks  
-- 🪶 **Lightweight** — zero external dependencies  
+- 🪶 **Lightweight** — fast, efficient, and easy to integrate
 - ⚙️ **TypeScript support** — fully typed API  
 - 🧩 **Composable** — integrate easily into existing code  
 - 🔧 **Framework agnostic** — works with any React setup (Vite, CRA, Next.js, etc.)
