@@ -1,6 +1,7 @@
 {
     "name": "react-performify",
     "version": "0.0.7",
+    "type": "module",
     "author": {
         "name": "Shakir Ullah",
         "email": "shakir201650@gmail.com"
