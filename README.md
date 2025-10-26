@@ -19,10 +19,18 @@ A lightweight React performance toolkit that gives developers easy-to-use hooks 
 
 ---
 
+📘 Documentation
+
+Comprehensive documentation is available here
+
+👉 [Documentation](https://shakir-afridi.github.io/react-performify/docs)
+
+---
+
 ## 📘 Storybook
 
 Explore all hooks interactively on Storybook:  
-👉 [Live Demo](https://shakir-afridi.github.io/react-performify)
+👉 [Live Demo](https://shakir-afridi.github.io/react-performify/storybook)
 
 ## 📦 Installation
 
