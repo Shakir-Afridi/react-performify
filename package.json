@@ -1,28 +1,21 @@
 {
     "name": "react-performify",
-    "version": "0.0.6",
-    "type": "module",
+    "version": "0.0.7",
     "author": {
         "name": "Shakir Ullah",
         "email": "shakir201650@gmail.com"
     },
     "description": "A lightweight React performance toolkit that gives developers easy-to-use hooks and utilities to measure, optimize, and visualize component performance.",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
+    "main": "dist/react-performify.umd.js",
+    "module": "dist/react-performify.es.js",
     "types": "dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/index.mjs",
-            "require": "./dist/index.cjs",
-            "types": "./dist/index.d.ts"
-        }
-    },
     "files": [
         "dist"
     ],
     "scripts": {
         "dev": "vite",
-        "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+        "build": "vite build",
+        "preview": "vite preview",
         "lint": "eslint src --ext .ts,.tsx",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
@@ -48,10 +41,10 @@
         "eslint-plugin-react-refresh": "^0.4.22",
         "globals": "^16.4.0",
         "prettier": "^3.6.2",
-        "tsup": "^8.5.0",
         "typescript": "~5.9.3",
         "typescript-eslint": "^8.45.0",
         "vite": "^7.1.12",
+        "vite-plugin-dts": "^4.5.4",
         "vitepress": "^1.6.4"
     },
     "repository": {
