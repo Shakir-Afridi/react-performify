@@ -5,6 +5,7 @@ export default defineConfig({
     title: "React Performify",
     description:
         "A lightweight React performance toolkit that gives developers easy-to-use hooks and utilities to measure, optimize, and visualize component performance. Its goal is to make performance management as easy as state management — all using clean, composable hooks.",
+    base: "/react-performify/docs",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
